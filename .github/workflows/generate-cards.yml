@@ -38,4 +38,8 @@ jobs:
           commit_message: "chore: update overview cards"
           file_pattern: "cards/*.svg"
         env:
+          GIT_AUTHOR_NAME: NawfalRAZOUK7
+          GIT_AUTHOR_EMAIL: 58399251+NawfalRAZOUK7@users.noreply.github.com
+          GIT_COMMITTER_NAME: NawfalRAZOUK7
+          GIT_COMMITTER_EMAIL: 58399251+NawfalRAZOUK7@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GH_CARDS_PAT }}
