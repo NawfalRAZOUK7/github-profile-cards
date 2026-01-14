@@ -3,7 +3,7 @@ name: Generate GitHub cards
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 */12 * * *" # every 12 hours
+    - cron: "0 */12 * * *"
 
 jobs:
   build-and-generate:
@@ -19,10 +19,8 @@ jobs:
           node-version: "22"
           cache: "pnpm"
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
+      - name: Enable corepack (pnpm)
+        run: corepack enable
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
