@@ -1,0 +1,54 @@
+<!-- CONCEPT 4 — Neo-Brutalist Grid (thick border + bold grid) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="200" viewBox="0 0 860 200">
+  <defs>
+    <clipPath id="avatarClip4">
+      <rect x="28" y="42" width="72" height="72" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- Offset shadow -->
+  <rect x="6" y="6" width="848" height="188" rx="14" fill="#111827"/>
+
+  <!-- Main card -->
+  <rect x="0.5" y="0.5" width="859" height="199" rx="14" fill="#0A0A0A" stroke="#F8FAFC" stroke-width="2"/>
+
+  <!-- Left identity zone -->
+  <rect x="20" y="20" width="290" height="160" rx="10" fill="#0A0A0A" stroke="#F8FAFC" stroke-width="2"/>
+
+  <!-- Avatar block -->
+  <rect x="28" y="42" width="72" height="72" rx="10" fill="#0A0A0A" stroke="#F8FAFC" stroke-width="2"/>
+  <image href="https://avatars.githubusercontent.com/u/58399251?v=4" x="28" y="42" width="72" height="72" clip-path="url(#avatarClip4)"/>
+
+  <!-- Identity -->
+  <text x="116" y="70" font-family="ui-sans-serif, system-ui" font-size="20" font-weight="800" fill="#F8FAFC">Nawfal RAZOUK</text>
+  <text x="116" y="94" font-family="ui-sans-serif, system-ui" font-size="12" font-weight="700" fill="#CBD5E1">@NawfalRAZOUK7</text>
+
+  <!-- Right stats grid zone -->
+  <rect x="330" y="20" width="510" height="160" rx="10" fill="#0A0A0A" stroke="#F8FAFC" stroke-width="2"/>
+
+  <!-- Grid lines -->
+  <line x1="585" y1="20" x2="585" y2="180" stroke="#F8FAFC" stroke-width="2"/>
+  <line x1="330" y1="100" x2="840" y2="100" stroke="#F8FAFC" stroke-width="2"/>
+
+  <!-- Accent cell background (bottom-right) -->
+  <rect x="585" y="100" width="255" height="80" rx="0" fill="#F97316"/>
+
+  <!-- Stats -->
+  <g font-family="ui-sans-serif, system-ui">
+    <!-- Top-left -->
+    <text x="352" y="52" font-size="11" font-weight="700" fill="#CBD5E1">FOLLOWERS</text>
+    <text x="352" y="84" font-size="20" font-weight="800" fill="#F8FAFC">19</text>
+
+    <!-- Top-right -->
+    <text x="607" y="52" font-size="11" font-weight="700" fill="#CBD5E1">PUBLIC REPOS</text>
+    <text x="607" y="84" font-size="20" font-weight="800" fill="#F8FAFC">84</text>
+
+    <!-- Bottom-left -->
+    <text x="352" y="132" font-size="11" font-weight="700" fill="#CBD5E1">TOTAL STARS</text>
+    <text x="352" y="164" font-size="20" font-weight="800" fill="#F8FAFC">10</text>
+
+    <!-- Bottom-right (inverted) -->
+    <text x="607" y="132" font-size="11" font-weight="800" fill="#0A0A0A">HIGHLIGHT</text>
+    <text x="607" y="164" font-size="14" font-weight="800" fill="#0A0A0A">Neo-brutal</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // === File layout ===
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // === Environment / modules (Node ESM) ===
+    // Use NodeNext so TS matches Node's ESM/CommonJS behavior
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    // ES2021 includes String.prototype.replaceAll typings
+    "target": "ES2021",
+    "lib": ["ES2021"],
+
+    "moduleDetection": "force",
+
+    // Allow using ESM-style imports comfortably
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // === Output options ===
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true,
+
+    // === Type checking ===
+    "strict": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // === Node / React notes ===
+    // You can uncomment these if you later add React or Node types:
+    // "jsx": "react-jsx",
+    // "types": ["node"],
+    // and: npm install -D @types/node
+
+    // === Misc ===
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
