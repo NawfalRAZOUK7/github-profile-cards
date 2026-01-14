@@ -32,14 +32,24 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_CARDS_PAT }}
         run: pnpm generate:all
 
-      - name: Commit updated cards
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update overview cards"
-          file_pattern: "cards/*.svg"
+      - name: Commit and push updated cards
+        if: success()
         env:
-          GIT_AUTHOR_NAME: NawfalRAZOUK7
-          GIT_AUTHOR_EMAIL: 58399251+NawfalRAZOUK7@users.noreply.github.com
-          GIT_COMMITTER_NAME: NawfalRAZOUK7
-          GIT_COMMITTER_EMAIL: 58399251+NawfalRAZOUK7@users.noreply.github.com
-          GITHUB_TOKEN: ${{ secrets.GH_CARDS_PAT }}
+          GH_PAT: ${{ secrets.GH_CARDS_PAT }}
+        run: |
+          # Configure commit identity (author shown on GitHub)
+          git config user.name "NawfalRAZOUK7"
+          git config user.email "58399251+NawfalRAZOUK7@users.noreply.github.com"
+
+          # If no changes in cards/, skip commit
+          if git diff --quiet --exit-code cards; then
+            echo "No changes in cards/, skipping commit."
+            exit 0
+          fi
+
+          git add cards/*.svg
+          git commit -m "chore: update overview cards"
+
+          # Push using HTTPS + PAT (no SSH, no passphrase)
+          git push "https://$GH_PAT@github.com/NawfalRAZOUK7/github-profile-cards.git" HEAD:main
+
