@@ -37,3 +37,5 @@ jobs:
         with:
           commit_message: "chore: update overview cards"
           file_pattern: "cards/*.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_CARDS_PAT }}
