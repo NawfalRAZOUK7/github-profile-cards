@@ -27,7 +27,7 @@
     <!-- Repos pill -->
     <rect x="252" y="90" width="240" height="30" rx="15" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.10)"/>
     <text x="268" y="110" font-weight="600" fill="#9FB0C0">Public repos</text>
-    <text x="476" y="110" text-anchor="end" font-weight="800" fill="#E6EDF3">84</text>
+    <text x="476" y="110" text-anchor="end" font-weight="800" fill="#E6EDF3">85</text>
 
     <!-- Stars pill (accent) -->
     <rect x="506" y="90" width="236" height="30" rx="15" fill="rgba(56,189,248,0.18)" stroke="rgba(56,189,248,0.35)"/>
