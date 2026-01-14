@@ -12,11 +12,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          # Avoid persisting the default GITHUB_TOKEN credentials (github-actions[bot])
+          # so our explicit PAT push below is actually used.
+          persist-credentials: false
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22"       # remove: cache: pnpm
+          node-version: "22"
 
       - name: Enable corepack (pnpm)
         run: corepack enable
@@ -29,6 +33,7 @@ jobs:
 
       - name: Build and generate cards
         env:
+          # Used by your generator to call GitHub APIs.
           GITHUB_TOKEN: ${{ secrets.GH_CARDS_PAT }}
         run: pnpm generate:all
 
@@ -36,13 +41,16 @@ jobs:
         if: success()
         env:
           GH_PAT: ${{ secrets.GH_CARDS_PAT }}
+          REPO: ${{ github.repository }}
         run: |
+          set -e
+
           # Configure commit identity (author shown on GitHub)
           git config user.name "NawfalRAZOUK7"
           git config user.email "58399251+NawfalRAZOUK7@users.noreply.github.com"
 
-          # If no changes in cards/, skip commit
-          if git diff --quiet --exit-code cards; then
+          # Skip if no changes in cards/
+          if [ -z "$(git status --porcelain cards)" ]; then
             echo "No changes in cards/, skipping commit."
             exit 0
           fi
@@ -51,5 +59,4 @@ jobs:
           git commit -m "chore: update overview cards"
 
           # Push using HTTPS + PAT (no SSH, no passphrase)
-          git push "https://$GH_PAT@github.com/NawfalRAZOUK7/github-profile-cards.git" HEAD:main
-
+          git push "https://x-access-token:${GH_PAT}@github.com/${REPO}.git" HEAD:main
