@@ -31,7 +31,7 @@
     <line x1="240" y1="130" x2="240" y2="154" stroke="rgba(148,163,184,0.18)" stroke-width="1"/>
 
     <!-- Repos -->
-    <text x="260" y="144" font-size="14" font-weight="700" fill="#E2E8F0">85</text>
+    <text x="260" y="144" font-size="14" font-weight="700" fill="#E2E8F0">86</text>
     <text x="292" y="144" font-size="12" font-weight="500" fill="#94A3B8">repos</text>
 
     <line x1="360" y1="130" x2="360" y2="154" stroke="rgba(148,163,184,0.18)" stroke-width="1"/>
