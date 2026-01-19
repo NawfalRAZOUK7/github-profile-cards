@@ -41,7 +41,7 @@
 
     <!-- Top-right -->
     <text x="607" y="52" font-size="11" font-weight="700" fill="#CBD5E1">PUBLIC REPOS</text>
-    <text x="607" y="84" font-size="20" font-weight="800" fill="#F8FAFC">86</text>
+    <text x="607" y="84" font-size="20" font-weight="800" fill="#F8FAFC">85</text>
 
     <!-- Bottom-left -->
     <text x="352" y="132" font-size="11" font-weight="700" fill="#CBD5E1">TOTAL STARS</text>

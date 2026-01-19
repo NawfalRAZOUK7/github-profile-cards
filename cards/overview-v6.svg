@@ -54,7 +54,7 @@
 
     <!-- Repos -->
     <text x="56" y="136" font-size="11" font-weight="600" letter-spacing="0.7" fill="#8B949E">PUBLIC REPOS</text>
-    <text x="520" y="136" text-anchor="end" font-size="15" font-weight="700" fill="#E6EDF3">86</text>
+    <text x="520" y="136" text-anchor="end" font-size="15" font-weight="700" fill="#E6EDF3">85</text>
 
     <!-- Stars -->
     <text x="56" y="167" font-size="11" font-weight="600" letter-spacing="0.7" fill="#8B949E">TOTAL STARS</text>
